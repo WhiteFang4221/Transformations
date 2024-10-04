@@ -1,14 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class Sphere : MonoBehaviour
 {
-    [SerializeField] private float _speed;
+    [SerializeField] private Vector3 _targetPosition;
+    [SerializeField] private float _duration;
+    [SerializeField] private LoopType _loopType;
+    [SerializeField] private int _loops;
 
-    private void Update()
+    private void Start()
     {
-        transform.Translate(Vector3.forward * _speed *Time.deltaTime);
+        transform.DOMove(_targetPosition, _duration).SetLoops(_loops, _loopType);
     }
 }

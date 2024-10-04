@@ -1,15 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class Cube : MonoBehaviour
 {
-    [SerializeField] private float _rotateSpeed;
+    [SerializeField] private Vector3 _rotationAngles;
+    [SerializeField] private float _duration;         
+    [SerializeField] private RotateMode _rotateMode;  
+    [SerializeField] private LoopType _loopType;      
+    [SerializeField] private int _loops;              
 
-    private void Update()
+    private void Start()
     {
-        float angle = _rotateSpeed * Time.deltaTime;
-        Quaternion rotation = Quaternion.Euler(0, angle, 0);
-        transform.rotation *= rotation;
+        transform.DORotate(_rotationAngles, _duration, _rotateMode)
+            .SetLoops(_loops, _loopType)
+            .SetEase(Ease.Linear);  
     }
 }

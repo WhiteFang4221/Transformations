@@ -1,21 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class SuperCube : MonoBehaviour
 {
-    [SerializeField] private float _moveSpeed;
-    [SerializeField] private float _rotateSpeed;
-    [SerializeField] private float _scaleSpeed;
+    [SerializeField] private Vector3 _targetPosition;
+    [SerializeField] private Vector3 _targetRotation;
+    [SerializeField] private Vector3 _targetScale;
+    [SerializeField] private float _duration;
+    [SerializeField] private LoopType _loopType;
+    [SerializeField] private int _loops;
 
-    private void Update()
+    private void Start()
     {
-        transform.Translate(Vector3.forward * _moveSpeed * Time.deltaTime);
-
-        float angle = _rotateSpeed * Time.deltaTime;
-        Quaternion rotation = Quaternion.Euler(0, angle, 0);
-        transform.rotation *= rotation;
-
-        transform.localScale += new Vector3(_scaleSpeed, _scaleSpeed, _scaleSpeed) * Time.deltaTime;
+        transform.DOMove(_targetPosition, _duration)
+            .SetLoops(_loops, _loopType)
+            .SetEase(Ease.Linear);
+        transform.DORotate(_targetRotation, _duration, RotateMode.FastBeyond360)
+            .SetLoops(_loops, _loopType)
+            .SetEase(Ease.Linear);
+        transform.DOScale(_targetScale, _duration)
+            .SetLoops(_loops, _loopType)
+            .SetEase(Ease.Linear);
     }
 }

@@ -476,7 +476,6 @@ GameObject:
   - component: {fileID: 962880473}
   - component: {fileID: 962880472}
   - component: {fileID: 962880471}
-  - component: {fileID: 962880470}
   m_Layer: 0
   m_Name: ColorSphere
   m_TagString: Untagged
@@ -484,22 +483,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &962880470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 962880469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5ce01c907ddfc8439b4f3a0c6897f9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _targetColor: {r: 1, g: 0.7260428, b: 0.023584902, a: 0}
-  _duration: 2
-  _loopType: 1
-  _loops: -1
 --- !u!135 &962880471
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -854,7 +837,6 @@ GameObject:
   - component: {fileID: 1648119453}
   - component: {fileID: 1648119452}
   - component: {fileID: 1648119451}
-  - component: {fileID: 1648119450}
   m_Layer: 0
   m_Name: SuperCube
   m_TagString: Untagged
@@ -862,24 +844,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1648119450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1648119449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 001ce0bf77f485e44bbc2e3614461927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _targetPosition: {x: -2, y: 0, z: 3}
-  _targetRotation: {x: 0, y: 180, z: 0}
-  _targetScale: {x: 1.5, y: 1.5, z: 1.5}
-  _duration: 3
-  _loopType: 1
-  _loops: -1
 --- !u!65 &1648119451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -998,10 +962,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baff008603b6b0543b2f9cabd03df41e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Duration>k__BackingField: 2
   _targetPosition: {x: 10, y: 2, z: 4}
-  _duration: 2
-  _loopType: 1
-  _loops: -1
 --- !u!135 &1750680723
 SphereCollider:
   m_ObjectHideFlags: 0

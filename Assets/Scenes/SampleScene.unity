@@ -155,10 +155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2280467974e9aa74aa7310015c09e407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Duration>k__BackingField: 2
+  <LoopType>k__BackingField: 1
+  <Loops>k__BackingField: -1
   _targetScale: {x: 2, y: 2, z: 2}
-  _duration: 2
-  _loopType: 0
-  _loops: -1
 --- !u!136 &27653978
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -279,11 +279,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b210374375642c143b70033c52123540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Duration>k__BackingField: 2
+  <LoopType>k__BackingField: 1
+  <Loops>k__BackingField: -1
   _rotationAngles: {x: 0, y: 180, z: 0}
-  _duration: 2
   _rotateMode: 0
-  _loopType: 0
-  _loops: -1
 --- !u!65 &595211787
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -476,6 +476,7 @@ GameObject:
   - component: {fileID: 962880473}
   - component: {fileID: 962880472}
   - component: {fileID: 962880471}
+  - component: {fileID: 962880475}
   m_Layer: 0
   m_Name: ColorSphere
   m_TagString: Untagged
@@ -569,6 +570,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &962880475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962880469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ce01c907ddfc8439b4f3a0c6897f9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Duration>k__BackingField: 4
+  <LoopType>k__BackingField: 1
+  <Loops>k__BackingField: -1
+  _targetColor: {r: 0.8301887, g: 0.67658305, b: 0.06657174, a: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,10 +728,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2503d9d8f2e12644988d0c8f4e89bbaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Duration>k__BackingField: 2
+  <LoopType>k__BackingField: 1
+  <Loops>k__BackingField: -1
   _text: {fileID: 1334688866}
-  _duration: 2
-  _loops: -1
-  _loopType: 0
 --- !u!114 &1334688866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -837,8 +854,11 @@ GameObject:
   - component: {fileID: 1648119453}
   - component: {fileID: 1648119452}
   - component: {fileID: 1648119451}
+  - component: {fileID: 1648119457}
+  - component: {fileID: 1648119456}
+  - component: {fileID: 1648119455}
   m_Layer: 0
-  m_Name: SuperCube
+  m_Name: Cube2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -930,6 +950,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1648119455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648119449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2280467974e9aa74aa7310015c09e407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Duration>k__BackingField: 10
+  <LoopType>k__BackingField: 1
+  <Loops>k__BackingField: -1
+  _targetScale: {x: 2, y: 2, z: 2}
+--- !u!114 &1648119456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648119449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b210374375642c143b70033c52123540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Duration>k__BackingField: 5
+  <LoopType>k__BackingField: 1
+  <Loops>k__BackingField: -1
+  _rotationAngles: {x: 0, y: 180, z: 0}
+  _rotateMode: 3
+--- !u!114 &1648119457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648119449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baff008603b6b0543b2f9cabd03df41e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Duration>k__BackingField: 2
+  <LoopType>k__BackingField: 1
+  <Loops>k__BackingField: -1
+  _targetPosition: {x: -2, y: 0, z: 3}
 --- !u!1 &1750680721
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,6 +1032,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Duration>k__BackingField: 2
+  <LoopType>k__BackingField: 1
+  <Loops>k__BackingField: -1
   _targetPosition: {x: 10, y: 2, z: 4}
 --- !u!135 &1750680723
 SphereCollider:
